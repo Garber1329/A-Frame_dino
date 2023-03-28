@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>My A-Frame Scene</title>
+	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+
+<body>
+<a-scene>
+	<a-assets>
+		<a-asset-item id="dino" src="./item/momma_dino_remake.glb"></a-asset-item>
+		<a-asset-item id="computer" src="./item/dream_computer_setup.glb"></a-asset-item>
+	</a-assets>
+
+	
+	<a-entity gltf-model="#computer" scale="0.5 0.5 0.5" position="-2 6 -7"></a-entity>
+	<a-entity gltf-model="#dino" position="-3 0 -5" rotation="0 -320 0" ></a-entity>
+	<a-entity gltf-model="#dino" position="-1 0 -5" rotation="0 -350 0"></a-entity>
+	<a-entity gltf-model="#dino" position="1 0 -5" rotation="0 -10 0"></a-entity>
+	<a-entity gltf-model="#dino" position="3 0 -5" rotation="0 -40 0" ></a-entity>
+	<a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="15" color="#7BC8A4"></a-plane>
+
+	<!-- <script>
+		var dinos = document.querySelectorAll('a-entity[gltf-model="#dino"]');
+		var radius = 3;
+		var angle = Math.PI / (dinos.length - 1);
+		for (var i = 0; i < dinos.length; i++) {
+			var x = radius * Math.cos(i * angle);
+			var z = radius * Math.sin(i * angle) + (radius - radius * Math.cos(angle));
+			dinos[i].setAttribute('position', x + ' 0 ' + z);
+			dinos[i].setAttribute('rotation', '0 ' + ((i + dinos.length / 2) * (360 / dinos.length) + 180) + ' 0');
+		}
+	</script> -->
+</a-scene>
+</body>
+
+</html>
